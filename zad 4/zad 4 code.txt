@@ -1,0 +1,15 @@
+void BtnOK_Click(object sender, EventArgs e)
+        {
+
+            double n = Convert.ToDouble(TbNumberN.Text);
+            int k = 0;
+            while (n <= 0)
+            {
+                n = Convert.ToInt32(Console.ReadLine());
+            }
+            int a = 3;
+            if (Log(n) % Log(a) == 0)
+                TextBlockAnswer.Text = $" true";
+            else
+                TextBlockAnswer.Text = $"false";
+        }
