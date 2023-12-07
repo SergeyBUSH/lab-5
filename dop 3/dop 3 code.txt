@@ -1,0 +1,20 @@
+private void BtnOK_Click(object sender, RoutedEventArgs e)
+        {
+            int A = int.Parse(TbNumberA.Text);
+            int B = int.Parse(TbNumberB.Text);
+
+
+
+
+            int remainder = 0;
+            while (B != 0)
+            {
+                remainder = A % B;
+                A = B;
+                B = remainder;
+            }
+
+
+
+            TextBlockAnswer.Text = "НОД: " + A;
+        }
