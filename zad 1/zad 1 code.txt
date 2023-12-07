@@ -1,0 +1,31 @@
+void BtnOK_Click(object sender, EventArgs e)
+        {
+
+            double nn = Convert.ToDouble(TbNumberNN.Text);
+          
+            string m = " ";
+            switch (nn)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    m = "в месяце 31 день";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    m = "в месяце 30 дней";
+                    break;
+                case 2:
+                    m = "в месяце 28 дней";
+                    break;
+            }
+            
+            
+            TextBlockAnswer.Text = $"{m}";
+        }
