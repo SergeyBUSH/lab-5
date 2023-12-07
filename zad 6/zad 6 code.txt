@@ -1,0 +1,12 @@
+void BtnOK_Click(object sender, EventArgs e)
+        {
+
+            double n = Convert.ToDouble(TbNumberN.Text);
+            while ((n > 0) & ((n % 10) % 2 == 0))
+            {
+                n /= 10;
+            }
+            if ((n % 10) % 2 ==2) { TextBlockAnswer.Text = "true"; }
+            else{ TextBlockAnswer.Text = "fals"; }
+            
+        }
