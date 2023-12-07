@@ -1,0 +1,35 @@
+void BtnOK_Click(object sender, EventArgs e)
+        {
+
+            double n = Convert.ToDouble(TbNumberN.Text);
+            double x = Convert.ToDouble(TbNumberX.Text);
+            double a=0, c=0, h = 0, S = 0;
+            switch (n)
+            {
+                case 1:
+                    a = x;
+                    c = a * Sqrt(2);
+                    h = c / 2;
+                    S = c * h / 2; 
+                    break;
+                case 2:
+                c= x;
+                a= c / Sqrt(2);
+                h= c / 2;
+                S= c * h / 2;
+                    break;
+                case 3:
+                h= x;
+                c= 2 * h;
+                a= c / Sqrt(2);
+                S= c * h / 2;
+                    break;
+                case 4:
+                S= x;
+                h= Sqrt(S);
+                c= 2 * h;
+                a= c / Sqrt(2);
+                    break;
+
+            }
+            TextBlockAnswer.Text = $"Длина катета равна: {a}\n Гипатенуза равна: {c}\n Высота опущенная на гипотенузу равна: {h}\n Площадь равна: {S}";
