@@ -1,0 +1,14 @@
+void BtnOK_Click(object sender, EventArgs e)
+        {
+
+            double p = Convert.ToDouble(TbNumberN.Text);
+            int k = 1;
+            double d = 10, s = 10;
+            while (s <= 200)
+            {
+                ++k;
+                d += d * p / 100;
+                s += d;
+            }
+            TextBlockAnswer.Text = $"{k},{s}";
+        }
